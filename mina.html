@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشروع الهندسة الكهربائية</title>
+    <style>
+        /* أنماط عامة */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        /* أنماط صفحة تسجيل الدخول */
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+            margin: 50px auto;
+        }
+        
+        /* أنماط الرأس */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* أنماط القائمة */
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+        }
+        
+        nav a:hover {
+            background-color: #2980b9;
+            border-radius: 4px;
+        }
+        
+        /* أنماط المحتوى */
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* أنماط الجدول */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: right;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        /* أنماط التذييل */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        
+        /* أنماط روابط التواصل */
+        .social-links {
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            margin: 0 10px;
+        }
+        
+        /* أنماط الأزرار */
+        button, .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        button:hover, .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* أنماط إضافية */
+        .student-name {
+            font-weight: bold;
+            color: #f1c40f;
+            margin: 10px 0;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- صفحة تسجيل الدخول -->
+    <div id="login-page" class="page active">
+        <div class="login-container">
+            <h1>تسجيل الدخول</h1>
+            <p class="student-name">إعداد الطالب: مينا سعيد شنوده</p>
+            <form id="login-form">
+                <input type="text" placeholder="اسم المستخدم" required>
+                <input type="password" placeholder="كلمة المرور" required>
+                <button type="submit">دخول</button>
+            </form>
+            <div style="margin-top: 20px;">
+                <a href="#" onclick="showPage('electrical1-page')" style="color: #3498db; text-decoration: none;">الدخول كزائر</a>
+            </div>
+            <div class="social-links" style="margin-top: 20px;">
+                <a href="https://www.facebook.com/mena.side.54?mibextid=ZbWKwL" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" width="30" alt="Facebook">
+                </a>
+                <a href="https://wa.me/201288637403" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- الصفحة الأولى -->
+    <div id="electrical1-page" class="page">
+        <header>
+            <h1>مشروع كلية الهندسة</h1>
+            <p class="student-name">إعداد الطالب: مينا سعيد شنوده</p>
+            <p>بحث عن الهندسة الكهربائية والفرق بينها وبين الهندسة الميكانيكية</p>
+        </header>
+        
+        <nav>
+            <a href="#" onclick="showPage('electrical1-page')">الصفحة الرئيسية</a>
+            <a href="#" onclick="showPage('electrical2-page')">الصفحة الثانية</a>
+            <a href="#" onclick="showPage('electrical3-page')">الصفحة الثالثة</a>
+            <a href="#" onclick="showPage('login-page')">تسجيل الخروج</a>
+        </nav>
+        
+        <div class="container">
+            <h2>مقدمة في الهندسة الكهربائية</h2>
+            <p>الهندسة الكهربائية هي أحد فروع الهندسة التي تهتم بدراسة وتطبيقات الكهرباء والإلكترونيات والكهرومغناطيسية. ظهرت كاختصاص هندسي في القرن التاسع عشر بعد انتشار التلغراف ومحطات إمداد الطاقة.</p>
+            
+            <h3>مجالات الهندسة الكهربائية:</h3>
+            <ul>
+                <li>هندسة الطاقة: توليد ونقل وتوزيع الطاقة الكهربائية</li>
+                <li>هندسة التحكم: تصميم أنظمة التحكم الآلي</li>
+                <li>هندسة الإلكترونيات: تصميم الدوائر الإلكترونية</li>
+                <li>هندسة الاتصالات: نقل المعلومات عبر القنوات الكهربائية</li>
+                <li>هندسة الحاسوب: تصميم أجهزة الحاسوب والبرمجيات</li>
+            </ul>
+            
+            <p>تعتبر الهندسة الكهربائية من أوسع فروع الهندسة حيث تشمل مجالات متنوعة تتراوح من الأجهزة الإلكترونية الدقيقة إلى أنظمة الطاقة الضخمة.</p>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="#" onclick="showPage('electrical2-page')" class="btn">الصفحة التالية →</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>جميع الحقوق محفوظة &copy; 2023 مشروع كلية الهندسة</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/mena.side.54?mibextid=ZbWKwL" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" width="30" alt="Facebook">
+                </a>
+                <a href="https://wa.me/201288637403" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WhatsApp">
+                </a>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- الصفحة الثانية -->
+    <div id="electrical2-page" class="page">
+        <header>
+            <h1>مشروع كلية الهندسة</h1>
+            <p class="student-name">إعداد الطالب: مينا سعيد شنوده</p>
+            <p>بحث عن الهندسة الكهربائية والفرق بينها وبين الهندسة الميكانيكية</p>
+        </header>
+        
+        <nav>
+            <a href="#" onclick="showPage('electrical1-page')">الصفحة الرئيسية</a>
+            <a href="#" onclick="showPage('electrical2-page')">الصفحة الثانية</a>
+            <a href="#" onclick="showPage('electrical3-page')">الصفحة الثالثة</a>
+            <a href="#" onclick="showPage('login-page')">تسجيل الخروج</a>
+        </nav>
+        
+        <div class="container">
+            <h2>الهندسة الميكانيكية - نظرة عامة</h2>
+            <p>الهندسة الميكانيكية هي فرع من فروع الهندسة يهتم بتصميم وتصنيع وتشغيل الآلات والأجهزة الميكانيكية. تعتبر من أقدم وأوسع التخصصات الهندسية.</p>
+            
+            <h3>مجالات الهندسة الميكانيكية:</h3>
+            <ul>
+                <li>الميكانيكا الصلبة: دراسة القوى وتأثيرها على الأجسام</li>
+                <li>الديناميكا الحرارية: دراسة تحويل الطاقة الحرارية إلى أشكال أخرى من الطاقة</li>
+                <li>ميكانيكا الموائع: دراسة سلوك السوائل والغازات</li>
+                <li>التصميم الميكانيكي: تصميم الآلات والمكونات الميكانيكية</li>
+                <li>التصنيع: عمليات إنتاج القطع الميكانيكية</li>
+            </ul>
+            
+            <h3>الفرق الأساسي بين الهندسة الكهربائية والميكانيكية:</h3>
+            <p>بينما تركز الهندسة الكهربائية على الأنظمة الكهربائية والإلكترونية، تركز الهندسة الميكانيكية على الأنظمة الفيزيائية والحركية. ومع ذلك، هناك العديد من المجالات التي تتداخل فيها التخصصان مثل الميكاترونكس والروبوتات.</p>
+            
+            <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <a href="#" onclick="showPage('electrical1-page')" class="btn">← الصفحة السابقة</a>
+                <a href="#" onclick="showPage('electrical3-page')" class="btn">الصفحة التالية →</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>جميع الحقوق محفوظة &copy; 2023 مشروع كلية الهندسة</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/mena.side.54?mibextid=ZbWKwL" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" width="30" alt="Facebook">
+                </a>
+                <a href="https://wa.me/201288637403" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WhatsApp">
+                </a>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- الصفحة الثالثة -->
+    <div id="electrical3-page" class="page">
+        <header>
+            <h1>مشروع كلية الهندسة</h1>
+            <p class="student-name">إعداد الطالب: مينا سعيد شنوده</p>
+            <p>بحث عن الهندسة الكهربائية والفرق بينها وبين الهندسة الميكانيكية</p>
+        </header>
+        
+        <nav>
+            <a href="#" onclick="showPage('electrical1-page')">الصفحة الرئيسية</a>
+            <a href="#" onclick="showPage('electrical2-page')">الصفحة الثانية</a>
+            <a href="#" onclick="showPage('electrical3-page')">الصفحة الثالثة</a>
+            <a href="#" onclick="showPage('login-page')">تسجيل الخروج</a>
+        </nav>
+        
+        <div class="container">
+            <h2>مقارنة شاملة بين الهندسة الكهربائية والميكانيكية</h2>
+            
+            <table>
+                <tr>
+                    <th>نقطة المقارنة</th>
+                    <th>الهندسة الكهربائية</th>
+                    <th>الهندسة الميكانيكية</th>
+                </tr>
+                <tr>
+                    <td>المحور الرئيسي</td>
+                    <td>الأنظمة الكهربائية والإلكترونية</td>
+                    <td>الأنظمة الميكانيكية والحركية</td>
+                </tr>
+                <tr>
+                    <td>المجالات الرئيسية</td>
+                    <td>الدوائر الكهربائية، الإلكترونيات، الطاقة، الاتصالات</td>
+                    <td>الميكانيكا، الديناميكا الحرارية، ميكانيكا الموائع، التصنيع</td>
+                </tr>
+                <tr>
+                    <td>الأدوات المستخدمة</td>
+                    <td>أجهزة القياس الكهربائية، المحاكاة الإلكترونية</td>
+                    <td>أدوات القياس الميكانيكية، برامج CAD</td>
+                </tr>
+                <tr>
+                    <td>مجالات العمل</td>
+                    <td>شركات الكهرباء، الاتصالات، الإلكترونيات</td>
+                    <td>شركات السيارات، الطيران، التصنيع</td>
+                </tr>
+                <tr>
+                    <td>التداخل بين التخصصين</td>
+                    <td colspan="2">الميكاترونكس، الروبوتات، أنظمة التحكم، أنظمة الطاقة</td>
+                </tr>
+            </table>
+            
+            <h3>الخاتمة</h3>
+            <p>تعتبر كل من الهندسة الكهربائية والميكانيكية من التخصصات الأساسية في عالم الهندسة. بينما يختلفان في التركيز والأدوات، إلا أنهما يكملان بعضهما البعض في العديد من التطبيقات الحديثة مثل أنظمة الطاقة المتجددة والمركبات الكهربائية والأنظمة الذكية.</p>
+            
+            <div style="text-align: left; margin-top: 20px;">
+                <a href="#" onclick="showPage('electrical2-page')" class="btn">← الصفحة السابقة</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>جميع الحقوق محفوظة &copy; 2023 مشروع كلية الهندسة</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/mena.side.54?mibextid=ZbWKwL" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" width="30" alt="Facebook">
+                </a>
+                <a href="https://wa.me/201288637403" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WhatsApp">
+                </a>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        function showPage(pageId) {
+            // إخفاء جميع الصفحات
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // إظهار الصفحة المطلوبة
+            document.getElementById(pageId).classList.add('active');
+        }
+        
+        // معالجة تسجيل الدخول
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showPage('electrical1-page');
+        });
+    </script>
+</body>
+</html>
