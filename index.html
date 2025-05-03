@@ -1,107 +1,151 @@
+ lang="en">
+<!DOCTYPE html>
+<html
+<head>
+  <meta charset="UTF-8">
+  <title>موقعي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>أهلاً بك في موقعي!</h1>
+
+  <script src="script.js"></script>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الفرق بين هندسة الحاسبات وهندسة الحاسوب</title>
+    <title>مشروع الهندسة الكهربائية</title>
     <style>
+        /* أنماط عامة */
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #f9f9f9;
             color: #333;
         }
-        header {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
-            color: white;
-            padding: 20px 0;
+        
+        /* أنماط صفحة تسجيل الدخول */
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 50px auto;
         }
+        
+        /* أنماط الرأس */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* أنماط القائمة */
         nav {
             background-color: #34495e;
             padding: 10px;
             text-align: center;
         }
+        
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
             padding: 5px 10px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
         }
+        
         nav a:hover {
             background-color: #2980b9;
+            border-radius: 4px;
         }
+        
+        /* أنماط المحتوى */
         .container {
             max-width: 900px;
             margin: 20px auto;
             padding: 20px;
             background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
+        
+        /* أنماط الجدول */
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
+        
         table, th, td {
             border: 1px solid #ddd;
         }
+        
         th, td {
             padding: 12px;
             text-align: right;
         }
+        
         th {
             background-color: #3498db;
             color: white;
         }
+        
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+        
+        /* أنماط التذييل */
         footer {
-            background: linear-gradient(135deg, #3498db, #2c3e50);
+            background-color: #2c3e50;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             margin-top: 20px;
         }
+        
+        /* أنماط روابط التواصل */
         .social-links {
-            margin: 15px 0;
+            margin-top: 15px;
         }
+        
         .social-links a {
-            display: inline-block;
             margin: 0 10px;
         }
-        .student-info {
-            background-color: #eaf2f8;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-        .btn {
-            display: inline-block;
+        
+        /* أنماط الأزرار */
+        button, .btn {
             background-color: #3498db;
             color: white;
             padding: 10px 15px;
+            border: none;
             border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
             text-decoration: none;
-            margin: 5px;
-            transition: background-color 0.3s;
+            display: inline-block;
         }
-        .btn:hover {
+        
+        button:hover, .btn:hover {
             background-color: #2980b9;
         }
+        
+        /* أنماط إضافية */
+        .student-name {
+            font-weight: bold;
+            color: #f1c40f;
+            margin: 10px 0;
+        }
+        
         .page {
             display: none;
         }
+        
         .active {
             display: block;
         }
@@ -110,235 +154,194 @@
 <body>
     <!-- صفحة تسجيل الدخول -->
     <div id="login-page" class="page active">
-        <div style="max-width: 400px; margin: 50px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-            <h1 style="text-align: center; color: #2c3e50;">تسجيل الدخول</h1>
-            <div class="student-info">
-                <h3 style="text-align: center; margin-top: 0;">إعداد الطلاب:</h3>
-                <p>1. يوسف أحمد إبراهيم - 01102230985</p>
-                <p>2. يوسف محمد قناوي - 01021391549</p>
-                <p>3. يوسف عمر علي - 01027823959</p>
-            </div>
-            <form id="login-form" style="margin-top: 20px;">
-                <input type="text" placeholder="اسم المستخدم" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px;">
-                <input type="password" placeholder="كلمة المرور" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px;">
-                <button type="submit" style="width: 100%; padding: 10px; background-color: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer;">دخول</button>
+        <div class="login-container">
+            <h1>تسجيل الدخول</h1>
+            <p class="student-name">إعداد الطالب: مينا سعيد شنوده</p>
+            <form id="login-form">
+                <input type="text" placeholder="اسم المستخدم" required>
+                <input type="password" placeholder="كلمة المرور" required>
+                <button type="submit">دخول</button>
             </form>
-            <div style="text-align: center; margin-top: 15px;">
-                <a href="#" onclick="showPage('main-page')" class="btn">الدخول كزائر</a>
+            <div style="margin-top: 20px;">
+                <a href="#" onclick="showPage('electrical1-page')" style="color: #3498db; text-decoration: none;">الدخول كزائر</a>
             </div>
-            <div class="social-links" style="text-align: center; margin-top: 20px;">
-                <a href="https://www.facebook.com/share/1C6KzzCJu3/" target="_blank" title="يوسف أحمد">
-                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" width="30" alt="Facebook">
+            <div class="social-links" style="margin-top: 20px;">
+                <a href="https://www.facebook.com/mena.side.54?mibextid=ZbWKwL" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" width="30" alt="Facebook">
                 </a>
-                <a href="https://www.facebook.com/share/1AKzWd5fgu/" target="_blank" title="يوسف محمد">
-                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" width="30" alt="Facebook">
-                </a>
-                <a href="https://www.facebook.com/youssef.amr.9883739?mibextid=wwXIfr" target="_blank" title="يوسف عمر">
-                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" width="30" alt="Facebook">
+                <a href="https://wa.me/201288637403" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WhatsApp">
                 </a>
             </div>
         </div>
-    </div>
-
-    <!-- الصفحة الرئيسية -->
-    <div id="main-page" class="page">
-        <header>
-            <h1>الفرق بين هندسة الحاسبات وهندسة الحاسوب</h1>
-            <p>مشروع تخرج - كلية الهندسة</p>
-        </header>
-        
-        <nav>
-            <a href="#" onclick="showPage('main-page')">مقدمة</a>
-            <a href="#" onclick="showPage('page1')">هندسة الحاسبات</a>
-            <a href="#" onclick="showPage('page2')">هندسة الحاسوب</a>
-            <a href="#" onclick="showPage('page3')">المقارنة</a>
-            <a href="#" onclick="showPage('login-page')">خروج</a>
-        </nav>
-        
-        <div class="container">
-            <h2>مقدمة</h2>
-            <p>يخلط الكثيرون بين تخصصي هندسة الحاسبات وهندسة الحاسوب، رغم وجود فروق جوهرية بينهما. هذا المشروع يهدف إلى توضيح الفروق الأساسية بين التخصصين من حيث المنهج الدراسي ومجالات العمل والمهارات المطلوبة.</p>
-            
-            <div class="student-info">
-                <h3>إعداد الطلاب:</h3>
-                <p>1. يوسف أحمد إبراهيم - 01102230985</p>
-                <p>2. يوسف محمد قناوي - 01021391549</p>
-                <p>3. يوسف عمر علي - 01027823959</p>
-            </div>
-            
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="#" onclick="showPage('page1')" class="btn">بدء الرحلة →</a>
-            </div>
-        </div>
-        
-        <footer>
-            <div class="social-links">
-                <a href="https://www.facebook.com/share/1C6KzzCJu3/" target="_blank" title="يوسف أحمد">
-                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" width="30" alt="Facebook">
-                </a>
-                <a href="https://www.facebook.com/share/1AKzWd5fgu/" target="_blank" title="يوسف محمد">
-                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" width="30" alt="Facebook">
-                </a>
-                <a href="https://www.facebook.com/youssef.amr.9883739?mibextid=wwXIfr" target="_blank" title="يوسف عمر">
-                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" width="30" alt="Facebook">
-                </a>
-            </div>
-            <p>جميع الحقوق محفوظة &copy; 2023 | مشروع تخرج كلية الهندسة</p>
-        </footer>
     </div>
     
     <!-- الصفحة الأولى -->
-    <div id="page1" class="page">
+    <div id="electrical1-page" class="page">
         <header>
-            <h1>هندسة الحاسبات (Computer Engineering)</h1>
+            <h1>مشروع كلية الهندسة</h1>
+            <p class="student-name">إعداد الطالب: مينا سعيد شنوده</p>
+            <p>بحث عن الهندسة الكهربائية والفرق بينها وبين الهندسة الميكانيكية</p>
         </header>
         
         <nav>
-            <a href="#" onclick="showPage('main-page')">مقدمة</a>
-            <a href="#" onclick="showPage('page1')">هندسة الحاسبات</a>
-            <a href="#" onclick="showPage('page2')">هندسة الحاسوب</a>
-            <a href="#" onclick="showPage('page3')">المقارنة</a>
-            <a href="#" onclick="showPage('login-page')">خروج</a>
+            <a href="#" onclick="showPage('electrical1-page')">الصفحة الرئيسية</a>
+            <a href="#" onclick="showPage('electrical2-page')">الصفحة الثانية</a>
+            <a href="#" onclick="showPage('electrical3-page')">الصفحة الثالثة</a>
+            <a href="#" onclick="showPage('login-page')">تسجيل الخروج</a>
         </nav>
         
         <div class="container">
-            <h2>ما هي هندسة الحاسبات؟</h2>
-            <p>هندسة الحاسبات هي تخصص يجمع بين الهندسة الكهربائية وعلوم الحاسوب، ويركز على تصميم وتطوير الأنظمة الحاسوبية المدمجة (Embedded Systems) والعتاد الصلب (Hardware).</p>
+            <h2>مقدمة في الهندسة الكهربائية</h2>
+            <p>الهندسة الكهربائية هي أحد فروع الهندسة التي تهتم بدراسة وتطبيقات الكهرباء والإلكترونيات والكهرومغناطيسية. ظهرت كاختصاص هندسي في القرن التاسع عشر بعد انتشار التلغراف ومحطات إمداد الطاقة.</p>
             
-            <h3>المجالات الرئيسية:</h3>
+            <h3>مجالات الهندسة الكهربائية:</h3>
             <ul>
-                <li>تصميم المعالجات والأنظمة المدمجة</li>
-                <li>هندسة العتاد الصلب (Hardware Engineering)</li>
-                <li>أنظمة التشغيل منخفضة المستوى</li>
-                <li>الإلكترونيات الرقمية والتناظرية</li>
-                <li>أنظمة التحكم والروبوتات</li>
+                <li>هندسة الطاقة: توليد ونقل وتوزيع الطاقة الكهربائية</li>
+                <li>هندسة التحكم: تصميم أنظمة التحكم الآلي</li>
+                <li>هندسة الإلكترونيات: تصميم الدوائر الإلكترونية</li>
+                <li>هندسة الاتصالات: نقل المعلومات عبر القنوات الكهربائية</li>
+                <li>هندسة الحاسوب: تصميم أجهزة الحاسوب والبرمجيات</li>
             </ul>
             
-            <h3>المهارات المطلوبة:</h3>
-            <ul>
-                <li>فهم عميق للإلكترونيات والدوائر الكهربائية</li>
-                <li>معرفة بأنظمة التشغيل منخفضة المستوى</li>
-                <li>إتقان لغات مثل C, C++, VHDL</li>
-                <li>القدرة على تصميم الدوائر المتكاملة</li>
-            </ul>
+            <p>تعتبر الهندسة الكهربائية من أوسع فروع الهندسة حيث تشمل مجالات متنوعة تتراوح من الأجهزة الإلكترونية الدقيقة إلى أنظمة الطاقة الضخمة.</p>
             
-            <div style="display: flex; justify-content: space-between; margin-top: 30px;">
-                <a href="#" onclick="showPage('main-page')" class="btn">← الصفحة السابقة</a>
-                <a href="#" onclick="showPage('page2')" class="btn">الصفحة التالية →</a>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="#" onclick="showPage('electrical2-page')" class="btn">الصفحة التالية →</a>
             </div>
         </div>
         
         <footer>
-            <!-- نفس تذييل الصفحة الرئيسية -->
+            <p>جميع الحقوق محفوظة &copy; 2023 مشروع كلية الهندسة</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/mena.side.54?mibextid=ZbWKwL" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" width="30" alt="Facebook">
+                </a>
+                <a href="https://wa.me/201288637403" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WhatsApp">
+                </a>
+            </div>
         </footer>
     </div>
     
     <!-- الصفحة الثانية -->
-    <div id="page2" class="page">
+    <div id="electrical2-page" class="page">
         <header>
-            <h1>هندسة الحاسوب (Computer Science Engineering)</h1>
+            <h1>مشروع كلية الهندسة</h1>
+            <p class="student-name">إعداد الطالب: مينا سعيد شنوده</p>
+            <p>بحث عن الهندسة الكهربائية والفرق بينها وبين الهندسة الميكانيكية</p>
         </header>
         
         <nav>
-            <a href="#" onclick="showPage('main-page')">مقدمة</a>
-            <a href="#" onclick="showPage('page1')">هندسة الحاسبات</a>
-            <a href="#" onclick="showPage('page2')">هندسة الحاسوب</a>
-            <a href="#" onclick="showPage('page3')">المقارنة</a>
-            <a href="#" onclick="showPage('login-page')">خروج</a>
+            <a href="#" onclick="showPage('electrical1-page')">الصفحة الرئيسية</a>
+            <a href="#" onclick="showPage('electrical2-page')">الصفحة الثانية</a>
+            <a href="#" onclick="showPage('electrical3-page')">الصفحة الثالثة</a>
+            <a href="#" onclick="showPage('login-page')">تسجيل الخروج</a>
         </nav>
         
         <div class="container">
-            <h2>ما هي هندسة الحاسوب؟</h2>
-            <p>هندسة الحاسوب تركز على الجانب البرمجي والخوارزميات، وتشمل تطوير البرمجيات، قواعد البيانات، الذكاء الاصطناعي، وأمن المعلومات.</p>
+            <h2>الهندسة الميكانيكية - نظرة عامة</h2>
+            <p>الهندسة الميكانيكية هي فرع من فروع الهندسة يهتم بتصميم وتصنيع وتشغيل الآلات والأجهزة الميكانيكية. تعتبر من أقدم وأوسع التخصصات الهندسية.</p>
             
-            <h3>المجالات الرئيسية:</h3>
+            <h3>مجالات الهندسة الميكانيكية:</h3>
             <ul>
-                <li>تطوير البرمجيات والتطبيقات</li>
-                <li>الذكاء الاصطناعي وتعلم الآلة</li>
-                <li>أمن المعلومات والأنظمة</li>
-                <li>قواعد البيانات وأنظمة إدارتها</li>
-                <li>تطوير الويب والتطبيقات المتنقلة</li>
+                <li>الميكانيكا الصلبة: دراسة القوى وتأثيرها على الأجسام</li>
+                <li>الديناميكا الحرارية: دراسة تحويل الطاقة الحرارية إلى أشكال أخرى من الطاقة</li>
+                <li>ميكانيكا الموائع: دراسة سلوك السوائل والغازات</li>
+                <li>التصميم الميكانيكي: تصميم الآلات والمكونات الميكانيكية</li>
+                <li>التصنيع: عمليات إنتاج القطع الميكانيكية</li>
             </ul>
             
-            <h3>المهارات المطلوبة:</h3>
-            <ul>
-                <li>إتقان لغات برمجة مثل Python, Java, JavaScript</li>
-                <li>فهم الخوارزميات وهياكل البيانات</li>
-                <li>معرفة بأنظمة قواعد البيانات</li>
-                <li>القدرة على تطوير حلول برمجية معقدة</li>
-            </ul>
+            <h3>الفرق الأساسي بين الهندسة الكهربائية والميكانيكية:</h3>
+            <p>بينما تركز الهندسة الكهربائية على الأنظمة الكهربائية والإلكترونية، تركز الهندسة الميكانيكية على الأنظمة الفيزيائية والحركية. ومع ذلك، هناك العديد من المجالات التي تتداخل فيها التخصصان مثل الميكاترونكس والروبوتات.</p>
             
             <div style="display: flex; justify-content: space-between; margin-top: 30px;">
-                <a href="#" onclick="showPage('page1')" class="btn">← الصفحة السابقة</a>
-                <a href="#" onclick="showPage('page3')" class="btn">الصفحة التالية →</a>
+                <a href="#" onclick="showPage('electrical1-page')" class="btn">← الصفحة السابقة</a>
+                <a href="#" onclick="showPage('electrical3-page')" class="btn">الصفحة التالية →</a>
             </div>
         </div>
         
         <footer>
-            <!-- نفس تذييل الصفحة الرئيسية -->
+            <p>جميع الحقوق محفوظة &copy; 2023 مشروع كلية الهندسة</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/mena.side.54?mibextid=ZbWKwL" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" width="30" alt="Facebook">
+                </a>
+                <a href="https://wa.me/201288637403" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WhatsApp">
+                </a>
+            </div>
         </footer>
     </div>
     
     <!-- الصفحة الثالثة -->
-    <div id="page3" class="page">
+    <div id="electrical3-page" class="page">
         <header>
-            <h1>المقارنة بين هندسة الحاسبات وهندسة الحاسوب</h1>
+            <h1>مشروع كلية الهندسة</h1>
+            <p class="student-name">إعداد الطالب: مينا سعيد شنوده</p>
+            <p>بحث عن الهندسة الكهربائية والفرق بينها وبين الهندسة الميكانيكية</p>
         </header>
         
         <nav>
-            <a href="#" onclick="showPage('main-page')">مقدمة</a>
-            <a href="#" onclick="showPage('page1')">هندسة الحاسبات</a>
-            <a href="#" onclick="showPage('page2')">هندسة الحاسوب</a>
-            <a href="#" onclick="showPage('page3')">المقارنة</a>
-            <a href="#" onclick="showPage('login-page')">خروج</a>
+            <a href="#" onclick="showPage('electrical1-page')">الصفحة الرئيسية</a>
+            <a href="#" onclick="showPage('electrical2-page')">الصفحة الثانية</a>
+            <a href="#" onclick="showPage('electrical3-page')">الصفحة الثالثة</a>
+            <a href="#" onclick="showPage('login-page')">تسجيل الخروج</a>
         </nav>
         
         <div class="container">
-            <h2>جدول المقارنة</h2>
+            <h2>مقارنة شاملة بين الهندسة الكهربائية والميكانيكية</h2>
             
             <table>
                 <tr>
                     <th>نقطة المقارنة</th>
-                    <th>هندسة الحاسبات</th>
-                    <th>هندسة الحاسوب</th>
+                    <th>الهندسة الكهربائية</th>
+                    <th>الهندسة الميكانيكية</th>
                 </tr>
                 <tr>
-                    <td>التركيز الرئيسي</td>
-                    <td>العتاد الصلب والأنظمة المدمجة</td>
-                    <td>البرمجيات والخوارزميات</td>
+                    <td>المحور الرئيسي</td>
+                    <td>الأنظمة الكهربائية والإلكترونية</td>
+                    <td>الأنظمة الميكانيكية والحركية</td>
                 </tr>
                 <tr>
-                    <td>المجالات</td>
-                    <td>تصميم المعالجات، الأنظمة المدمجة، الإلكترونيات</td>
-                    <td>تطوير البرمجيات، الذكاء الاصطناعي، أمن المعلومات</td>
+                    <td>المجالات الرئيسية</td>
+                    <td>الدوائر الكهربائية، الإلكترونيات، الطاقة، الاتصالات</td>
+                    <td>الميكانيكا، الديناميكا الحرارية، ميكانيكا الموائع، التصنيع</td>
                 </tr>
                 <tr>
-                    <td>اللغات الرئيسية</td>
-                    <td>C, C++, VHDL, Assembly</td>
-                    <td>Python, Java, JavaScript, SQL</td>
+                    <td>الأدوات المستخدمة</td>
+                    <td>أجهزة القياس الكهربائية، المحاكاة الإلكترونية</td>
+                    <td>أدوات القياس الميكانيكية، برامج CAD</td>
                 </tr>
                 <tr>
-                    <td>فرص العمل</td>
-                    <td>مهندس عتاد، مصمم دوائر، مهندس أنظمة مدمجة</td>
-                    <td>مبرمج، مطور ويب، خبير أمن معلومات</td>
+                    <td>مجالات العمل</td>
+                    <td>شركات الكهرباء، الاتصالات، الإلكترونيات</td>
+                    <td>شركات السيارات، الطيران، التصنيع</td>
                 </tr>
                 <tr>
-                    <td>المساقات الأساسية</td>
-                    <td>إلكترونيات رقمية، معالجات دقيقة، أنظمة مدمجة</td>
-                    <td>خوارزميات، هياكل بيانات، قواعد بيانات</td>
+                    <td>التداخل بين التخصصين</td>
+                    <td colspan="2">الميكاترونكس، الروبوتات، أنظمة التحكم، أنظمة الطاقة</td>
                 </tr>
             </table>
             
             <h3>الخاتمة</h3>
-            <p>بينما تركز هندسة الحاسبات على الجانب المادي والفيزيائي للحواسيب (العتاد الصلب)، تركز هندسة الحاسوب على الجانب المنطقي والبرمجي. كلا التخصصين مكملان لبعضهما ويلتقيان في مجالات مثل أنظمة التشغيل والشبكات.</p>
+            <p>تعتبر كل من الهندسة الكهربائية والميكانيكية من التخصصات الأساسية في عالم الهندسة. بينما يختلفان في التركيز والأدوات، إلا أنهما يكملان بعضهما البعض في العديد من التطبيقات الحديثة مثل أنظمة الطاقة المتجددة والمركبات الكهربائية والأنظمة الذكية.</p>
             
             <div style="text-align: left; margin-top: 20px;">
-                <a href="#" onclick="showPage('page2')" class="btn">← الصفحة السابقة</a>
+                <a href="#" onclick="showPage('electrical2-page')" class="btn">← الصفحة السابقة</a>
             </div>
         </div>
         
         <footer>
-            <!-- نفس تذييل الصفحة الرئيسية -->
+            <p>جميع الحقوق محفوظة &copy; 2023 مشروع كلية الهندسة</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/mena.side.54?mibextid=ZbWKwL" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" width="30" alt="Facebook">
+                </a>
+                <a href="https://wa.me/201288637403" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WhatsApp">
+                </a>
+            </div>
         </footer>
     </div>
     
@@ -351,15 +354,12 @@
             
             // إظهار الصفحة المطلوبة
             document.getElementById(pageId).classList.add('active');
-            
-            // التمرير لأعلى الصفحة
-            window.scrollTo(0, 0);
         }
         
         // معالجة تسجيل الدخول
         document.getElementById('login-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            showPage('main-page');
+            showPage('electrical1-page');
         });
     </script>
 </body>
